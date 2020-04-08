@@ -15,8 +15,8 @@ class Node:
     def setLeft(self,node):
         self.__left = node
 
-"""""
-node1 = Node(3,None,None)
+"""node1 = Node(3,None,None)
 node2 = Node(4,None,None)
 node3 = Node(1,node1,node2)
-print(node3.getLeft().getVal())"""
+print(node3.getLeft().getVal())
+"""""

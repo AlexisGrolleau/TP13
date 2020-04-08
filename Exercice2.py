@@ -5,15 +5,13 @@ class BinaryTree:
     def getRoot(self):
         return self.__root
 
-Node3 = Node(3,None,None)
-Node4 = Node(4,Node3,None)
-Node6 = Node(6,None,None)
-Node5 = Node(5,Node4,Node6)
+arbre = BinaryTree(Node(12,None,None))
+arbre.getRoot().setLeft(Node(5,None,None))
+arbre.getRoot().getLeft().setLeft(Node(4,None,None))
+arbre.getRoot().getLeft().setRight(Node(6,None,None))
+arbre.getRoot().getLeft().getLeft().setLeft(Node(3,None,None))
 
-Node18 = Node(18,None,None)
-Node21 = Node(21,None,None)
-Node19 = Node(19,Node18,Node21)
-Node17 = Node(17,None,Node19)
-
-Node12 = Node(12,Node5,Node17)
-BinaryTree(Node12)
+arbre.getRoot().setRight(Node(17,None,None))
+arbre.getRoot().getRight().setRight(Node(19,None,None))
+arbre.getRoot().getRight().getRight().setLeft(Node(18,None,None))
+arbre.getRoot().getRight().getRight().setRight(Node(21,None,None))
