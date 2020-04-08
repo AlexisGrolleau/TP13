@@ -16,3 +16,4 @@ Node19 = Node(19,Node18,Node21)
 Node17 = Node(17,None,Node19)
 
 Node12 = Node(12,Node5,Node17)
+BinaryTree(Node12)
