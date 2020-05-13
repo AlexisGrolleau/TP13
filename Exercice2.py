@@ -10,13 +10,26 @@ class BinaryTree:
             return True
         else: return False
 
-    def size(self,Node):
-        if Node.getLeft() == None:
-            return 1
+    def size(self, node):
+        if node is None:
+            return 0
         else:
-            return arbre.size(Node.getLeft()) +1
+            return self.size(node.getLeft()) + 1 + self.size(node.getRight())
 
+    def sumValues(self,node):
+        if node is None:
+            return 0
+        else:
+            return self.sumValues(node.getLeft()) + node.getVal() + self.sumValues(node.getRight())
 
+    def numberLeaves(self, node):
+         if node is None:
+             return 0
+         else:
+             if node.getLeft() and node.getRight() is None:
+                print("True")
+             else:
+                return self.numberLeaves(node.getLeft() + node.getRight())
 
 arbre = BinaryTree(Node(12,None,None))
 arbre.getRoot().setLeft(Node(5,None,None))
@@ -30,3 +43,5 @@ arbre.getRoot().getRight().getRight().setLeft(Node(18,None,None))
 arbre.getRoot().getRight().getRight().setRight(Node(21,None,None))
 
 print(arbre.size(arbre.getRoot()))
+print(arbre.sumValues(arbre.getRoot()))
+print(arbre.numberLeaves(arbre.getRoot()))
